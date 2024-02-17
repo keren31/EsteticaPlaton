@@ -155,7 +155,7 @@ export default function Login() {
           </Link>
 
           <ReCAPTCHA
-            sitekey="6LcO53UpAAAAAAoU7BFyjrdUw_dRtxeuXaEu8P0r"
+            sitekey="6Lfd-XUpAAAAAPBWbMNLDy5A9RIvHtG8mFp9M3ZG"
             onChange={onChange}
           />
           {recaptchaError && <p className="error-message">{recaptchaError}</p>}

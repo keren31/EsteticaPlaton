@@ -18,7 +18,7 @@ export default function Actualizar() {
       data.append('Contrasena', password);
 
       fetch(
-        'https://apicasadelmarisco.azurewebsites.net/api/CasaDelMarisco/RecuperarContrasena?Correo=' +
+        'http://lacasadelmariscoapi.somee.com/api/CasaDelMarisco/RecuperarContrasena?Correo=' +
           correo +
           '&Contrasena=' +
           password,

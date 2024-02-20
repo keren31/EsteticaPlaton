@@ -24,7 +24,7 @@ export default function Login() {
       setTimeout(() => {
         setIsButtonDisabled(false);
         setLoginAttempts(0); // Reiniciar el contador de intentos de inicio de sesión
-      }, 3000);
+      }, 5000);
     }
   }, [loginAttempts]);
  
@@ -36,7 +36,7 @@ export default function Login() {
     data.append('Contrasena', password);
 
     if (validateEmail(email) && validatePassword(password)) {
-      fetch('https://apicasadelmarisco.azurewebsites.net/api/CasaDelMarisco/Login?Correo=' + email + '&Contrasena=' + password, {
+      fetch('http://lacasadelmariscoapi.somee.com/api/CasaDelMarisco/Login?Correo=' + email + '&Contrasena=' + password, {
         method: 'POST',
         body: data,
       })
@@ -48,7 +48,7 @@ export default function Login() {
             if (loginAttempts + 1 >= 3) {
               setIsButtonDisabled(true); // Deshabilitar el botón después de 3 intentos fallidos
               fetch(
-                "https://apicasadelmarisco.azurewebsites.net/" +
+                "http://lacasadelmariscoapi.somee.com/" +
                   "api/CasaDelMarisco/BloquearCuenta?Correo=" +
                   email,
                 {
